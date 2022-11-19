@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Head from './Head';
 import TodoContainer from './Todo/Index';
