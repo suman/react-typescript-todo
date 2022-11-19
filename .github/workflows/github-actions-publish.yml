@@ -6,8 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my first action
-        env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       
@@ -16,6 +14,8 @@ jobs:
       - run: npm install
       - run:  git config --global user.email 'sumanbogati@gmail.com'
       - run:  git config --global user.name 'suman'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: git remote set-url origin https://suman:${{ secrets.GH_SECRET }}@github.com/suman/react-typescript-todo
       - run: npm run deploy
       
