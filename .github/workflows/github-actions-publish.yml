@@ -12,6 +12,9 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
+      - run: git config --global user.email "sumanbogati@gmail.com"
+      - run: git config --global user.name "Suman Bogati" 
+
       - run: git remote set-url origin https://suman:${{ secrets.GH_SECRET }}@github.com/suman/react-typescript-todo
       - run: npm run deploy
       
