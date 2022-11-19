@@ -5,9 +5,7 @@ jobs:
   pusblish-website:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }} 
+      - uses: actions/checkout@v3 
       - uses: actions/setup-node@v3    
         with:
           node-version: '14'
@@ -16,8 +14,7 @@ jobs:
       - run: git config --global user.name "Suman Bogati" 
 
       - run: git remote set-url origin https://suman:${{ secrets.GH_SECRET }}@github.com/suman/react-typescript-todo
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-	 - run: npm run deploy
-      
+       - run: npm run deploy
+         with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
 
