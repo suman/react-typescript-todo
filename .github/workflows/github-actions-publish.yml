@@ -1,0 +1,16 @@
+name: github-actions-publish
+run-name: ${{ github.actor }} is publishing website
+on: [push]
+jobs:
+  pusblish-website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+
+        with:
+          node-version: '14'
+      - run: npm run build
+      
+
