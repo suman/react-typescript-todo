@@ -12,12 +12,9 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      env:
-	 MY_EMAIL: sumanbogati@gmail.com
-    	 MY_NAME: suman
-      run: |
-        git config --global user.email $MY_EMAIL
-        git config --global user.name $MY_NAME
+       
+      - run:  git config --global user.email 'sumanbogati@gmail.com'
+      - run:  git config --global user.name 'suman'
      
       - run: npm run deploy
       
