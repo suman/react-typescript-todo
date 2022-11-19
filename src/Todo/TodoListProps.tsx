@@ -5,6 +5,7 @@ export interface TodoListProps {
 export interface Todo {
     userId: number;
     id: number;
-    title: string;
-    completed: false;
+    content: string;
+    createdAt: string;
+    isCompleted: boolean;
 }
