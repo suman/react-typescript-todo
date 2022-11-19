@@ -4,6 +4,8 @@ on: [push]
 jobs:
   pusblish-website:
     runs-on: ubuntu-latest
+    env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
 
@@ -11,7 +13,7 @@ jobs:
 
         with:
           node-version: '14'
-        env:GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       
       - run: npm install
        
       - run:  git config --global user.email 'sumanbogati@gmail.com'
