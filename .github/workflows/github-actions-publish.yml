@@ -11,6 +11,7 @@ jobs:
 
         with:
           node-version: '14'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm install
        
       - run:  git config --global user.email 'sumanbogati@gmail.com'
