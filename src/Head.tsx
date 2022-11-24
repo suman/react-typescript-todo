@@ -2,7 +2,7 @@ import React from 'react';
 
 function Head() {
   return (
-    <h3>Prioritize Your Task</h3>
+    <h3>Guys!!! Prioritize Your Task</h3>
   )
 }
 
